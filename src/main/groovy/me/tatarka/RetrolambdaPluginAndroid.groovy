@@ -114,11 +114,11 @@ public class RetrolambdaPluginAndroid implements Plugin<Project> {
             ensureCompileOnJava8(retrolambda, javaCompileTask)
         }
 
-        def extractAnnotations = project.tasks.findByName("extract${variant.capitalize()}Annotations")
-        if (extractAnnotations) {
-            extractAnnotations.deleteAllActions()
-            project.logger.warn("$extractAnnotations.name is incompatible with java 8 sources and has been disabled.")
-        }
+        //def extractAnnotations = project.tasks.findByName("extract${variant.capitalize()}Annotations")
+        //if (extractAnnotations) {
+        //    extractAnnotations.deleteAllActions()
+        //    project.logger.warn("$extractAnnotations.name is incompatible with java 8 sources and has been disabled.")
+        //}
 
         JavaCompile compileUnitTest = (JavaCompile) project.tasks.findByName("compile${variant.capitalize()}UnitTestJava")
         if (compileUnitTest) {
