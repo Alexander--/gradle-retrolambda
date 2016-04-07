@@ -18,7 +18,6 @@ package me.tatarka
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
-import com.android.build.gradle.LibraryPlugin
 import com.android.build.gradle.api.BaseVariant
 import com.android.build.gradle.api.TestVariant
 import org.gradle.api.Plugin
@@ -42,7 +41,7 @@ import static me.tatarka.RetrolambdaPlugin.checkIfExecutableExists
 public class RetrolambdaPluginAndroid implements Plugin<Project> {
     @Override
     void apply(Project project) {
-        def isLibrary = project.plugins.hasPlugin(LibraryPlugin)
+        def isLibrary = project.plugins.hasPlugin('com.android.library')
 
         if (isLibrary) {
             def android = project.extensions.getByType(LibraryExtension)

@@ -41,10 +41,10 @@ sourceSets {
 dependencies {
     compile gradleApi()
     compile localGroovy()
-    provided 'com.android.tools.build:gradle:1.0.0'
+    compile 'com.android.tools.build:gradle:1.5.0'
     
     testCompile 'org.assertj:assertj-core:2.1.0'
-    testCompile 'com.android.tools.build:gradle:1.0.0'
+    testCompile 'com.android.tools.build:gradle:1.5.0'
     testCompile 'com.neenbedankt.gradle.plugins:android-apt:1.6'
 }
 
