@@ -71,14 +71,14 @@ public class RetrolambdaPluginJava implements Plugin<Project> {
                 }
             }
 
-            project.tasks.getByName("test").doFirst {
+            /*project.tasks.getByName("test").doFirst {
                 if (project.retrolambda.onJava8) {
                     //Ensure the tests run on java6/7
                     def oldJava = "${project.retrolambda.tryGetOldJdk()}/bin/java"
                     if (!checkIfExecutableExists(oldJava)) throw new ProjectConfigurationException("Cannot find executable: $oldJava", null)
                     executable oldJava
                 }
-            }
+            }*/
         }
     }
 }

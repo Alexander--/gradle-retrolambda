@@ -79,6 +79,7 @@ artifacts {
 //}
 
 signing {
+    required { project.hasProperty('sonatype.username') && project.hasProperty('sonatype.password') }
     sign configurations.archives
 }
 
